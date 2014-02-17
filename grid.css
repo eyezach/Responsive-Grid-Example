@@ -1,0 +1,798 @@
+@charset "UTF-8";
+/* CSS grid document made with 10% more love than the leading brand by @eyezach */
+
+/* Normalize Browser Style Resets - http://github.com/necolas/normalize.css */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {display: block;}
+audio,canvas,video{display: inline-block;*display: inline;*zoom: 1;}
+audio:not([controls]){display: none;height: 0;}
+[hidden]{display: none;}
+html{font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html,button,input,select,textarea{font-family: sans-serif;}
+body{margin: 0;}
+a:focus{outline: thin dotted;}
+a:hover,a:active{outline: 0;}
+h1{font-size: 2em;margin: 0.67em 0;}
+h2{font-size: 1.5em;margin: 0.83em 0;}
+h3{font-size: 1.17em;margin: 1em 0;}
+h4{font-size: 1em;margin: 1.33em 0;}
+h5{font-size: 0.83em;margin: 1.67em 0;}
+h6{font-size: 0.75em;margin: 2.33em 0;}
+abbr[title]{border-bottom: 1px dotted;}
+b,strong{font-weight: bold;}
+blockquote{margin: 1em 40px;}
+dfn{font-style: italic;}
+mark{background: #ff0;color: #000;}
+p,pre{margin: 1em 0;}
+pre,code,kbd,samp{font-family: monospace, serif;_font-family: 'courier new', monospace;font-size: 1em;}
+pre{white-space: pre;white-space: pre-wrap;word-wrap: break-word;}
+q{quotes: none;}
+q:before,q:after{content: '';content: none;}
+small{font-size: 75%;}
+sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}
+sup{top: -0.5em;}
+sub{bottom: -0.25em;}
+dl,menu,ol,ul{margin: 1em 0;}
+dd{margin: 0 0 0 40px;}
+menu,ol,ul{padding: 0 0 0 40px;}
+nav ul,nav ol{list-style: none;list-style-image: none;}
+img{border: 0; -ms-interpolation-mode: bicubic;}
+svg:not(:root){overflow: hidden;}
+figure{margin: 0;}
+form{margin: 0;}
+fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em;}
+legend{border: 0; /* 1 */padding: 0;white-space: normal; *margin-left: -7px;}
+button,input,select,textarea{font-size: 100%;margin: 0;vertical-align: baseline;*vertical-align: middle;}
+button,input{line-height: normal;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor: pointer;-webkit-appearance: button;*overflow: visible;}
+button[disabled],input[disabled]{cursor: default;}
+input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0;*height: 13px;*width: 13px;}
+input[type="search"]{-webkit-appearance: textfield;-moz-box-sizing: content-box;-webkit-box-sizing: content-box;box-sizing: content-box;}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance: none;}
+button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0;}
+textarea{overflow: auto;vertical-align: top;}
+table{border-collapse: collapse;border-spacing: 0;}
+
+/* =======================================
+
+			  	END NORMALIZE
+
+   ======================================= */
+
+/* Baseline styles */
+body {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#999;
+}
+
+/* paragraph text */
+p{
+	margin-bottom:0.83333333333333em; /* 10px / 12px */
+	font-size:0.75em; /* 12px / 16px */
+	line-height:1.58333333em; /* 19px / 12px */
+	display: block;
+	text-align:left;
+	hyphenate: auto;
+	hyphenate-before: 2;
+	hyphenate-after: 3;
+	hyphenate-lines: 3;
+	orphans: 4;
+	-moz-column-count: 1;
+	-moz-column-gap: 30px;
+	-webkit-column-count: 1;
+	-webkit-column-gap: 30px;
+}
+
+/* header */
+h1{
+	margin-bottom:0.416666666666667em; /* 10px / 24px */
+	font-size:1.5em; /* 24px / 16px */
+}
+
+/* sub-head */
+h2{
+	margin-bottom:0.555555555555555em; /* 10px / 18px */
+	font-size:1.125em; /* 18px / 16px */
+}
+
+h3{
+	margin-bottom:0.714285714285714em; /* 10px / 14px */
+	font-size:0.875em; /* 14px / 16px */
+}
+
+a{
+	text-decoration:none;
+	color:#000;
+}
+
+.fluid-row{
+	width:auto;
+	height:auto;
+	background-color:#FFFFFF; /* #369 */
+}
+
+.sans{
+	font-family:Arial, Helvetica, sans-serif;
+ }
+ 
+.figure{
+	/*margin-bottom: 0.5em;*/
+	margin:0;
+	padding:0;
+	/*float:left;*/
+	overflow:hidden;
+	display: block;
+}
+
+.figcaption{
+	margin-top:0.83333333em; /* 10px / 12px */
+	font-style:italic;
+	font-size:1em; /* 12px / 12px */
+}
+
+.figure img.main{
+	margin-bottom: 0.5em;
+	display: block;
+}
+ 
+img, 
+embed,
+object,
+video{
+	max-width:100%;
+	height: auto;
+	display: block;
+ }
+ 
+ul.horizontal{
+	margin:auto;
+	text-decoration:none;
+	list-style-type:none;
+	text-align:center;
+	background-color:#CCC;
+ }
+ 
+li.horizontal{
+	margin:0;
+	padding:0.71428571em; /* 10px / 14px */
+	display:inline-block;
+	font-size:0.875em; /* 14px / 16px */
+	
+ }
+ 
+ ul.vertical{
+	margin:auto;
+	text-decoration:none;
+	list-style-type:none;
+	text-align:left;
+	background-color:#CCC;
+ }
+ 
+li.vertical{
+	margin:0;
+	padding:0.71428571em; /* 10px / 14px */
+	display:block;
+	font-size:0.875em; /* 14px / 16px */
+	
+ }
+ 
+.centered{
+	/*width:50%;*/
+	width:100%;
+	margin:0 auto;
+	padding:0;
+ }
+ 
+/* ================================================== 
+				  		TYPOGRAPHY					
+   ================================================== */
+   
+/* sub-head */
+h2{
+	margin-bottom:0.555555555555555em; /* 10px / 18px */
+	font-size:1.3125em; /* 21px / 16px */
+}
+
+/* paragraph text */
+p{
+	margin-bottom:0.83333333333333em; /* 10px / 12px */
+	font-size:0.875em; /* 14px / 16px */
+	line-height:1.58333333em; /* 19px / 12px */
+}
+
+/* for monster screens that shouldnt even exist yet */
+@media screen and (min-width: 1600px) {
+.wrapper{
+	margin:0 auto;
+	width:91.5%; /* 1464 / 1600 */
+	height:100%;
+	background-color:#000000;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:0.8196721311475%; /* 12 / 1464 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:6.6939890710382%; /* 98 / 1464 */
+}
+
+.grid-2{
+	width:15.0273224043716%; /* 220 / 1464 */
+}
+
+.grid-3{
+	width:23.3606557377049%; /* 342 / 1464 */
+}
+
+.grid-4{
+	width:31.6939890710383%; /* 464 / 1464 */
+}
+
+.grid-6{
+	width:48.3606557377049%; /* 708 / 1464 */
+}
+
+.grid-8{
+	width:65.027322%; /* 952 / 1464 */
+}
+
+.grid-9{
+	width:73.360656%; /* 1074 / 1464 */
+}
+
+.grid-12{
+	width:98.360655737705%; /* 1440 / 1464 */
+}
+.fluid-row{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	float:none;
+	overflow:auto;
+	background-color:#000000;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+
+/* for big ass screens mang */
+@media screen and (min-width: 1280px) and (max-width: 1599px)  {
+.wrapper{
+	margin:0 auto;
+	width:90%; /* 1152 / 1280 */
+	height:100%;
+	background-color:#eeeeee;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:1.3888888888888%; /* 16 / 1152 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:5.55555555555555%; /* 64 / 1152 */
+}
+
+.grid-2{
+	width:13.88888888888889%; /* 160 / 1152 */
+}
+
+.grid-3{
+	width:22.22222222222222%; /* 256 / 1152 */
+}
+
+.grid-4{
+	width:30.55555555555555%; /* 352 / 1152 */
+}
+
+.grid-6{
+	width:47.22222222222222%; /* 544 / 1152 */
+}
+
+.grid-8{
+	width:63.888889%; /* 736 / 1152 */
+}
+
+.grid-9{
+	width:72.222222%; /* 832 / 1152 */
+}
+
+.grid-12{
+	width:97.22222222222222%; /* 1120 / 1152 */
+}
+.fluid-row{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	float:none;
+	overflow:auto;
+	background-color:#eeeeee;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+
+/* for big ass screens mang */
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+.wrapper{
+	margin:0 auto;
+	width:78%; /* 936 / 1200 */
+	height:100%;
+	background-color:#000000;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:0.6410256410256%; /* 6 / 936 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:7.051282051282%; /* 66 / 936 */
+}
+
+.grid-2{
+	width:15.3846153846154%; /* 144 / 936 */
+}
+
+.grid-3{
+	width:23.7179487179487%; /* 222 / 936 */
+}
+
+.grid-4{
+	width:32.051282051282%; /* 300 / 936 */
+}
+
+.grid-6{
+	width:48.7179487179487%; /* 456 / 936 */
+}
+
+.grid-8{
+	width:65.384615%; /* 612 / 936 */
+}
+
+.grid-9{
+	width:73.717949%; /* 690 / 936 */
+}
+
+.grid-12{
+	width:98.7179487179487%; /* 924 / 936 */
+}
+.fluid-row{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	float:none;
+	overflow:auto;
+	background-color:#000000;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}	
+}
+
+/* regular ol' run of the mill standard size... good starting point */
+@media screen and (min-width: 1023px) and (max-width: 1199px) {
+.wrapper{
+	margin:0 auto;
+	width:91.495601%; /* 936 / 1023 */
+	height:100%;
+	background-color:#eeeeee;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:0.6410256410256%; /* 6 / 936 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:7.051282051282%; /* 66 / 936 */
+}
+
+.grid-2{
+	width:15.3846153846154%; /* 144 / 936 */
+}
+
+.grid-3{
+	width:23.7179487179487%; /* 222 / 936 */
+}
+
+.grid-4{
+	width:32.051282051282%; /* 300 / 936 */
+}
+
+.grid-6{
+	width:48.7179487179487%; /* 456 / 936 */
+}
+
+.grid-8{
+	width:65.384615%; /* 612 / 936 */
+}
+
+.grid-9{
+	width:73.717949%; /* 690 / 936 */
+}
+
+.grid-12{
+	width:98.7179487179487%; /* 924 / 936 */
+}
+.fluid-row{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	float:none;
+	overflow:auto;
+	background-color:#eeeeee;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+
+/* Portrait tablet to landscape and desktop (max-width: 979px) : ipad and tablets */
+@media screen and (min-width: 768px) and (max-width: 1022px) {
+.wrapper{
+	margin:0 auto;
+	width:87.5%; /* 672 / 768 */
+	height:100%;
+	background-color:#000000;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:1.1904761904761%; /* 8 / 672 = 1.1904761904761% */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:5.9523809523809%; /* 40 / 672 =  */
+}
+
+.grid-2{
+	width:14.2857142857143%; /* 96 / 672 =  */
+}
+
+.grid-3{
+	width:22.6190476190476%; /* 152 / 672 =  */
+}
+
+.grid-4{
+	width:30.9523809523809%; /* 208 / 672 =  */
+}
+
+.grid-6{
+	width:47.6190476190476%; /* 320 / 672 =  */
+}
+
+.grid-8{
+	width:64.285714%; /* 432 / 672 */
+}
+
+.grid-9{
+	width:72.619048%; /* 488 / 672 */
+}
+
+.grid-12{
+	width:97.6190476190476%; /* 656 / 672 =  */
+}
+
+.fluid-row{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	float:none;
+	overflow:auto;
+	background-color:#000000;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+
+/* Landscape phone to portrait tablet: less popular devices */
+@media screen and (max-width: 767px) {
+.wrapper{
+	margin:0 auto;
+	width:89.960887%; /* 690 / 767 */
+	height:100%;
+	background-color:#eeeeee;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:0.78125%; /* 6 / 768 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:auto; /* 66 / 768 = 8.59375% */
+	float:none;
+}
+
+.grid-2{
+	width:auto; /* 144 / 768 = 18.75% */
+	float:none;
+}
+
+.grid-3{
+	width:auto; /* 222 / 768 = 28.90625% */
+	float:none;
+}
+
+.grid-4{
+	width:auto; /* 300 / 768 = 39.0625% */
+	float:none;
+}
+
+.grid-6{
+	width:auto; /* 456 / 768 = 59.375% */
+	float:none;
+}
+
+.grid-8{
+	width:auto;
+	float:none;
+}
+
+.grid-9{
+	width:auto;
+	float:none;
+}
+
+.grid-12{
+	width:auto; /* 690 / 768 = 89.84375% */
+	float:none;
+}
+.fluid-row{
+	width:auto;
+	height:auto;
+	background-color:#eeeeee;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+	
+/* Landscape phones and down: iphone for sure*/
+@media screen and (max-width: 480px) {
+.wrapper{
+	margin:0 auto;
+	width:100%; /* 480 / 480 */
+	height:100%;
+	background-color:red;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:2.5%; /* 12 / 480 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:auto; 
+	float:none;
+}
+
+.grid-2{
+	width:auto; 
+	float:none;
+}
+
+.grid-3{
+	width:auto; 
+	float:none;
+}
+
+.grid-4{
+	width:auto;
+	float:none;
+}
+
+.grid-6{
+	width:auto; 
+	float:none;
+}
+
+.grid-8{
+	width:auto;
+	float:none;
+}
+
+.grid-9{
+	width:auto;
+	float:none;
+}
+
+.grid-12{
+	width:auto; 
+	float:none;
+}
+.fluid-row{
+	width:auto;
+	height:auto;
+	background-color:red;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+
+/* This is for Le browser resize... If some dufus wants to minimize their browser to act like it's a phone */
+@media screen and (max-width: 400px) {
+.wrapper{
+	margin:0 auto;
+	width:100%; /* 400 / 400 */
+	height:100%;
+	background-color:#eeeeee;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:3%; /* 12 / 400 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:auto; 
+	float:none;
+}
+
+.grid-2{
+	width:auto; 
+	float:none;
+}
+
+.grid-3{
+	width:auto; 
+	float:none;
+}
+
+.grid-4{
+	width:auto;
+	float:none;
+}
+
+.grid-6{
+	width:auto; 
+	float:none;
+}
+
+.grid-8{
+	width:auto;
+	float:none;
+}
+
+.grid-9{
+	width:auto;
+	float:none;
+}
+
+.grid-12{
+	width:auto; 
+	float:none;
+}
+.fluid-row{
+	width:auto;
+	height:auto;
+	background-color:#eeeeee;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+}
+
+/* Portrait phones and down: iphone for sure, especially 3g and down*/
+@media screen and (max-width: 320px) {
+.wrapper{
+	margin:0 auto;
+	width:100%; /* 320 / 320 */
+	height:100%;
+	background-color:#000000;
+}
+
+.grid-1,.grid-2,.grid-3,.grid-4,
+.grid-6,.grid-8,.grid-9,.grid-12{
+	margin:3.75%; /* 12 / 320 */
+	padding:0;
+	background-color:#ffffff;
+	float:left;
+	overflow:auto;
+}
+
+.grid-1{
+	width:auto; 
+	float:none;
+}
+
+.grid-2{
+	width:auto; 
+	float:none;
+}
+
+.grid-3{
+	width:auto; 
+	float:none;
+}
+
+.grid-4{
+	width:auto;
+	float:none;
+}
+
+.grid-6{
+	width:auto; 
+	float:none;
+}
+
+.grid-8{
+	width:auto;
+	float:none;
+}
+
+.grid-9{
+	width:auto;
+	float:none;
+}
+
+.grid-12{
+	width:auto; 
+	float:none;
+}
+.fluid-row{
+	width:auto;
+	height:auto;
+	background-color:#000000;
+	-webkit-transition: background-color 1000ms;
+	-moz-transition: background-color 1000ms;
+	-o-transition: background-color 1000ms;
+	-ms-transition: background-color 1000ms;
+	transition: background-color 1000ms;
+}
+
+}
